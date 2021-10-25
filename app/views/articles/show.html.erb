@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <h1 class="text-uppercase"><%= @article.title %></h1>
+</p>
+
+<p>
+  <%= @article.content %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Eliminar', @article, method: :delete %> |
+<%= link_to 'Back', articles_path %>

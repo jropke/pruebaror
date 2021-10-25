@@ -1,0 +1,25 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1>Articulos</h1>
+
+<div class="row row-cols-3">
+    <% @articles.each do |article| %>
+    <div class="col">
+      <div class="card border-primary mb-3" style="max-width: 18rem;">
+
+            <div class="card-header"><%= article.title %></div>
+            <div class="card-body text-secondary"><%= article.created_at %></div>
+            <div class="card-body text-primary"><%= link_to 'Ver más', article %></div>
+            <div class="card-footer bg-transparent border-primary">nombre_usuario</div>
+
+      </div>
+    </div>
+    <% end %>
+
+<br>
+
+<%#= link_to 'New Article', new_article_path %>
+</div>
+</div>
